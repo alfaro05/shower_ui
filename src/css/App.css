@@ -28,7 +28,7 @@ label{
     background-color: black;
     display: flex;
     flex-direction: row;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 input{
     width: 50vw;
@@ -38,8 +38,8 @@ input{
     flex-direction: column;
 }
 .nav-bar{
-    margin: 5px;
-    overflow:hidden;
+    margin: 4px;
+    flex-wrap: wrap;
 }
 .nav-bar a{
     margin: 4px;
