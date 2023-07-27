@@ -20,7 +20,8 @@ export const AdminForm = ()=>{
 
     return(
         <>
-            {showPanelState?'':<LoginForm input={inputState} edit={editInput} onButton={onButtonClick}/>}
+            {showPanelState?'':<LoginForm input={inputState} edit={editInput} 
+            onSubmit={onButtonClick} onButton={onButtonClick}/>}
             {showPanelState?<Panel/>:''}
         </>
     )
