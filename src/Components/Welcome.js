@@ -26,7 +26,7 @@ export const LocatPage = ()=>{
             <h2>Ubicación</h2>
             <p>
                 La actividad se va a celebrar en el salón del condominio Villas de Toscana, que se ubica
-                sobre la calle Pipianes, frente al CTP de San Sebastián.
+                sobre la calle Pipianes, frente al CTP de San Sebastián. Se va a celebrar el sábado 26 de agosto, a la 1pm.
             </p>
         </>
     )
