@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <img src="%PUBLIC_URL%/underground.png"/>
+          <img src="/underground.png"/>
           <h1>¡YA CASI VIENE LEO!</h1>
         </header>
         <NavBar/>
