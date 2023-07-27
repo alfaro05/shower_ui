@@ -66,6 +66,9 @@ export const InForm = ()=>{
                 }
             })   
         })
+        .then(()=>{
+            alert("¡Muchas gracias! Ya confirmamos su asistencia.")
+        })
         .catch(err=>{
             console.error(err);
         }) 
