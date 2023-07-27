@@ -21,6 +21,11 @@ p{
 label{
     font-weight: bold;
 }
+.App-header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
 input{
     width: 50vw;
 }
