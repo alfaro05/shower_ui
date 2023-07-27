@@ -40,13 +40,13 @@ input{
     margin: 5px;
 }
 .nav-bar a{
-    margin: 5px;
+    margin: 4px;
     text-decoration: none;
     font-weight: bold;
     background-color: var(--strong);
-    padding: 5px;
+    padding: 4px;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 .nav-bar a:hover{
     background-color: var(--soft);
