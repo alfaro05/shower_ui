@@ -20,8 +20,7 @@ export const AdminForm = ()=>{
 
     return(
         <>
-            {showPanelState?'':<LoginForm input={inputState} edit={editInput} 
-            onSubmit={onButtonClick} onButton={onButtonClick}/>}
+            {showPanelState?'':<LoginForm input={inputState} edit={editInput} onButton={onButtonClick}/>}
             {showPanelState?<Panel/>:''}
         </>
     )
@@ -32,7 +31,8 @@ const LoginForm = ({input, edit, onButton})=>{
         <form method="post" className="input-form">
             <label>Contraseña de admin:</label> <br/>
             <input type="text" value={input} onChange={edit} className="password"></input><br/>
-            <input type="button" value='Ingresar' className="button" onClick={onButton}/>
+            <input type="button" value='Ingresar' className="button" onClick={onButton}
+            onSubmit={onButton}/>
         </form>
     )
 
