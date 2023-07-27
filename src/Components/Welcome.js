@@ -9,7 +9,7 @@ export const WelcPage = ()=>{
             </p>
             <p>    
                 Por una cuestión de control, para que todo salga de la mejor forma, desplegamos este
-                formulario para que todo sea lo más bonito posible. Por esto es importante confirmar asistencia
+                formulario para que todo se pueda realizar sin ningún imprevisto. Por esto es importante confirmar asistencia
                 con la información solicitada. El regalo es lo de menos, pero se muestra un menú desplegable con
                 sugerencias de regalos.
             </p>
