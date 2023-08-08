@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { GiftForm } from "./NewGiftForm"
 
+const apiURL = 'https://shower-api.onrender.com';
+
 export const PeoplePanel =()=>{
     useEffect(()=>{
 

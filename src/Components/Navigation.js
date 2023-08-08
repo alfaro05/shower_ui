@@ -6,7 +6,6 @@ export const NavBar = ()=>{
         <Link to="/">Confirmación</Link>
         <Link to="/bienvenida">Bienvenida</Link>
         <Link to="/ubicacion">Ubicación</Link>
-        <Link to="/admin">¿Sos admin?</Link>
     </div>
     )
 }

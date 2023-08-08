@@ -76,7 +76,7 @@ export const InForm = ()=>{
     return(
         <>
             <h2>¡Bienvenid@!</h2>
-            <p>Nos estamos preparando para recibir a Leo próximamente y queremos que nos acomapañe
+            <p>Nos estamos preparando para recibir a Leonardo próximamente y queremos que nos acomapañe
                 para este momento tan especial. Para confirmar su asistencia al té, por favor ingrese
                 su información en los siguientes espacios. ¡Nos vemos!
             </p>
