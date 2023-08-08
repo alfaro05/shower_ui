@@ -16,6 +16,19 @@ export const PeoplePanel =()=>{
         })
         .then((data)=>{
             console.log(data);
+            let auxArray = peopleRows;
+            data.forEach(element => {
+                auxArray.push(
+                <>
+                    <td>{element.nombre}</td>
+                    <td>{element.apellido}</td>
+                    <td>{element.regalo}</td>
+                </>)
+            });
+            setRows(auxArray);
+        })
+        .then(()=>{
+            console.log(peopleRows);
         })
     })
     return(
