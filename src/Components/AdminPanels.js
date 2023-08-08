@@ -1,11 +1,19 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { GiftForm } from "./NewGiftForm"
 
 const apiURL = 'https://shower-api.onrender.com';
 
 export const PeoplePanel =()=>{
+    const [peopleRows, setRows] = useState([]);
     useEffect(()=>{
-
+        fetch(`${apiURL}/read-info`, {headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
+        })
+        .then((response)=>{
+            console.log(response);
+        })
     })
     return(
         <>aqui va la gente</>
