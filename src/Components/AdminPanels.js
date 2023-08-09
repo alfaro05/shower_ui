@@ -15,7 +15,7 @@ export const PeoplePanel =()=>{
             return(response.json())
         })
         .then((data)=>{
-            let auxArray = peopleRows;
+            let auxArray = [...peopleRows];
             data.forEach(element => {
                 auxArray.push(
                 <tr>
