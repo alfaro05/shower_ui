@@ -31,7 +31,7 @@ export const PeoplePanel =()=>{
         })
     },[])
     return(
-        <table>
+        <table className="results-table">
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>

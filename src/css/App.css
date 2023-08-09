@@ -80,3 +80,10 @@ input{
 input.password{
     -webkit-text-security: disc;
 }
+.results-table{
+    width: 90%;
+    column-width: 20%;
+}
+.results-table th{
+    border: 1px var(--soft);
+}
