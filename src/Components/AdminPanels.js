@@ -16,8 +16,6 @@ export const PeoplePanel =()=>{
         })
         .then((data)=>{
             let auxArray = [...peopleRows];
-            console.log("que es el estado: ", peopleRows);
-            console.log("desempacado es: ",...peopleRows);
             data.forEach(element => {
                 auxArray.push(
                 <tr>
@@ -27,7 +25,6 @@ export const PeoplePanel =()=>{
                 </tr>)
             });
             setRows(auxArray);
-            console.log("estado: ", peopleRows);
         })
         .catch((err)=>{
             console.error(err);
