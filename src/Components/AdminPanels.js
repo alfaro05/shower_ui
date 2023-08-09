@@ -19,20 +19,24 @@ export const PeoplePanel =()=>{
             let auxArray = peopleRows;
             data.forEach(element => {
                 auxArray.push(
-                <>
+                <tr>
                     <td>{element.nombre}</td>
                     <td>{element.apellido}</td>
                     <td>{element.regalo}</td>
-                </>)
+                </tr>)
             });
             setRows(auxArray);
         })
-        .then(()=>{
-            console.log(peopleRows);
-        })
     })
     return(
-        <>aqui va la gente</>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Regalo</th>
+            </tr>
+            {peopleRows}
+        </table>
     )
 }
 
