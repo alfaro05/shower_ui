@@ -15,7 +15,6 @@ export const PeoplePanel =()=>{
             return(response.json())
         })
         .then((data)=>{
-            console.log(data);
             let auxArray = peopleRows;
             data.forEach(element => {
                 auxArray.push(
@@ -26,6 +25,9 @@ export const PeoplePanel =()=>{
                 </tr>)
             });
             setRows(auxArray);
+        })
+        .then(()=>{
+            console.log(peopleRows);
         })
     })
     return(
