@@ -25,12 +25,11 @@ export const PeoplePanel =()=>{
                 </tr>)
             });
             setRows(auxArray);
-            console.log(auxArray);
         })
-        .then(()=>{
-            console.log(peopleRows);
+        .catch((err)=>{
+            console.error(err);
         })
-    })
+    },[])
     return(
         <table>
             <tr>
