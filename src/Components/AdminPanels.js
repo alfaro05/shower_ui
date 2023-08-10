@@ -3,6 +3,21 @@ import { GiftForm } from "./NewGiftForm"
 
 const apiURL = 'https://shower-api.onrender.com';
 
+const TableRows = ({ fetchedRows })=>{
+    //includes the rows of the table and the logic
+    //for "loading" status
+    return(
+        <>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Regalo</th>
+            </tr>
+            {fetchedRows}
+        </>
+    )
+}
+
 export const PeoplePanel =({showPpl})=>{
     //contains table tag and fetch logic
     const [peopleRows, setRows] = useState([]);
@@ -39,25 +54,12 @@ export const PeoplePanel =({showPpl})=>{
     return(
         
         <table className="results-table">
-            <tableRows fetchedRows={peopleRows}/>
+            {loadedStatus?<TableRows fetchedRows={peopleRows}/>:"Cargando..."}
         </table>
     )
 }
 
-export const tableRows = ({ fetchedRows })=>{
-    //includes the rows of the table and the logic
-    //for "loading" status
-    return(
-        <>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Regalo</th>
-            </tr>
-            {fetchedRows}
-        </>
-    )
-}
+
 
 export const GiftsPanel =()=>{
     useEffect(()=>{
