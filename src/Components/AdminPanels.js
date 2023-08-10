@@ -3,8 +3,10 @@ import { GiftForm } from "./NewGiftForm"
 
 const apiURL = 'https://shower-api.onrender.com';
 
-export const PeoplePanel =()=>{
+export const PeoplePanel =({showPpl})=>{
+    //contains table tag and fetch logic
     const [peopleRows, setRows] = useState([]);
+    const [loadedStatus, setLoadedStatus] = useState(false);
     useEffect(()=>{
         fetch(`${apiURL}/read-info`, {headers: {
             'Accept': 'application/json',
@@ -26,19 +28,34 @@ export const PeoplePanel =()=>{
             });
             setRows(auxArray);
         })
+        .then(()=>{
+            setLoadedStatus(true);
+        })
         .catch((err)=>{
             console.error(err);
         })
     },[])
     return(
+        
         <table className="results-table">
+            {loadedStatus?<tableRows fetchedRows={peopleRows}/>:"Cargando..."}
+            
+        </table>
+    )
+}
+
+export const tableRows = ({ fetchedRows })=>{
+    //includes the rows of the table and the logic
+    //for "loading" status
+    return(
+        <>
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Regalo</th>
             </tr>
-            {peopleRows}
-        </table>
+            {fetchedRows}
+        </>
     )
 }
 
