@@ -30,6 +30,7 @@ export const PeoplePanel =({showPpl})=>{
         })
         .then(()=>{
             setLoadedStatus(true);
+            console.log(peopleRows);
         })
         .catch((err)=>{
             console.error(err);
@@ -38,8 +39,7 @@ export const PeoplePanel =({showPpl})=>{
     return(
         
         <table className="results-table">
-            {loadedStatus?<tableRows fetchedRows={peopleRows}/>:"Cargando..."}
-            
+            <tableRows fetchedRows={peopleRows}/>
         </table>
     )
 }
