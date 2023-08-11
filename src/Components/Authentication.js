@@ -55,10 +55,10 @@ export const Panel = ()=>{
             return(response.json());
         })
         .then((data)=>{
-            setCountState((previous)=>({...previous,[forms]:data}));
+            setCountState((previous)=>({...previous,["forms"]:data}));
         })
         .then(()=>{
-            console.log("estado ",countState);
+            console.log("estad¨",countState);
         })
         .catch((err)=>{
             console.log(err);
@@ -72,10 +72,7 @@ export const Panel = ()=>{
             return(response.json());
         })
         .then((data)=>{
-            setCountState((previous)=>({...previous,[guests]:data}));
-        })
-        .then(()=>{
-            console.log("estado ",countState);
+            setCountState((previous)=>({...previous,["guests"]:data}));
         })
         .catch((err)=>{
             console.log(err);
