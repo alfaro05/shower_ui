@@ -78,7 +78,7 @@ export const Panel = ()=>{
             console.log(err);
         });
 
-    })
+    },[])
 
     const peopleButton = (event)=>{
         if(showPeople){
