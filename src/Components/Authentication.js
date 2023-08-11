@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { GiftsPanel, NewGiftForm, PeoplePanel } from "./AdminPanels";
 
+const apiURL = 'https://shower-api.onrender.com';
 const adminPassword = process.env.adminPassword || '1234';
 
 export const AdminForm = ()=>{
@@ -42,6 +43,45 @@ export const Panel = ()=>{
     const [showPeople, setPeople] = useState(false);
     const [showGifts, setGifts] = useState(false);
     const [giftAddFlag, setGiftAddFlag] = useState(false);
+    const [countState, setCountState] = useState({forms:0, guests:0});
+
+    useEffect(()=>{
+        fetch(`${apiURL}/count-forms`, {headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
+        })
+        .then((response)=>{
+            return(response.json());
+        })
+        .then((data)=>{
+            setCountState((previous)=>({...previous,[forms]:data}));
+        })
+        .then(()=>{
+            console.log("estado ",countState);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+        fetch(`${apiURL}/count-company`, {headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
+        })
+        .then((response)=>{
+            return(response.json());
+        })
+        .then((data)=>{
+            setCountState((previous)=>({...previous,[guests]:data}));
+        })
+        .then(()=>{
+            console.log("estado ",countState);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+
+    })
 
     const peopleButton = (event)=>{
         if(showPeople){
