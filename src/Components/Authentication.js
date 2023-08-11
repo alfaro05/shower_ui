@@ -55,7 +55,7 @@ export const Panel = ()=>{
             return(response.json());
         })
         .then((data)=>{
-            setCountState((previous)=>({...previous,["forms"]:data}));
+            setCountState((previous)=>({...previous,"forms":data}));
         })
         .then(()=>{
             console.log("estad¨",countState);
@@ -72,7 +72,7 @@ export const Panel = ()=>{
             return(response.json());
         })
         .then((data)=>{
-            setCountState((previous)=>({...previous,["guests"]:data}));
+            setCountState((previous)=>({...previous,"guests":data}));
         })
         .catch((err)=>{
             console.log(err);
@@ -113,7 +113,7 @@ export const Panel = ()=>{
                 <label>Invitaciones confirmadas</label>
                 <input type="button" value={showPeople?'Ocultar':'Mostrar'} 
                 onClick={peopleButton} className="button"/><br/>
-                {showPeople?<PeoplePanel/>:""}
+                {showPeople?<PeoplePanel count={countState}/>:""}
             </div>
             <hr width="95%" color=""/>
 

@@ -18,11 +18,12 @@ const TableRows = ({ fetchedRows })=>{
     )
 }
 
-export const PeoplePanel =({showPpl})=>{
+export const PeoplePanel =({count})=>{
     //contains table tag and fetch logic
     const [peopleRows, setRows] = useState([]);
     const [loadedStatus, setLoadedStatus] = useState(false);
     useEffect(()=>{
+        console.log(count.guests, count.forms, count);
         fetch(`${apiURL}/read-info`, {headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
